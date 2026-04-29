@@ -23,7 +23,7 @@
         </header>
         <main>
             <section>
-                <form action="">
+                <form id="loveForm" action="">
                 <h2>Your journey for love starts here</h2>
                 <p>Welcome to Navigating Love — a space dedicated to guiding you through relationships, self-growth, and meaningful connections. Love is not a straight path; it’s full of twists, challenges, and discoveries. What does love mean to you personally? Is it comfort, passion, or growth? How do you define connection in your own life, and how has that definition changed over time?</p>
                 <p>As you explore, Lets discover things about you through our questionaire: .</p>
@@ -39,6 +39,15 @@
                 <button type="submit">Submit Answers</button>
                 <img src="romance-1.jpg" alt = "Romantic picture" height="560" width="460">
                 </form>
+                <div id="confirmation" style="display:none; color: green; font-weight: bold;">Submission received! Thank you for your answers.</div>
+
+                <script>
+                document.getElementById('loveForm').addEventListener('submit', function(event) {
+                  event.preventDefault();
+                  document.getElementById('loveForm').style.display = 'none';
+                  document.getElementById('confirmation').style.display = 'block';
+                });
+                </script>
             </section>
         </main>
         <footer>
